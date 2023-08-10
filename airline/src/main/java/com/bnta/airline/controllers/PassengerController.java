@@ -40,10 +40,9 @@ public class PassengerController {
     }
 
     @PutMapping(value = "/{id}")    // ADDED
-    public ResponseEntity<Passenger> updateChocolate(@RequestBody PassengerDTO passengerDTO, @PathVariable Long id){
+    public ResponseEntity<Passenger> updatePassenger(@RequestBody PassengerDTO passengerDTO, @PathVariable Long id){
         Passenger updatedPassenger= passengerService.updatePassenger(passengerDTO, id);
         return new ResponseEntity<>(updatedPassenger, HttpStatus.OK);
     }
-
-
+    
 }
